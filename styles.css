@@ -1,0 +1,171 @@
+:root{
+    font-size: 10px;
+    /*Global Variables*/
+    --background-color: #012030;
+    --font-color: #F2F0EB;
+    --highlight-one-color: #45C4B0;
+    --highlight-two-color: #9AEBA3;
+    --highlight-three-color: #74A60A;
+    --neutral-color: #9BB5BF;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Orbitron;
+}
+
+body{
+    color: var(--font-color);
+    background-color: var(--background-color);
+}
+
+#navbar{
+    border-bottom: 1px solid var(--highlight-one-color);
+    width: 100vw;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    background-color: var(--background-color);
+}
+
+.logo{
+    height: 100%;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.links-container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#links-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3rem;
+    list-style: none;
+}
+
+#links-list a{
+    color: var(--font-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: font-size 0.3s ease;
+}
+
+#welcome-section{
+    height: 100vh;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.information-container{
+    width: 50%;
+}
+
+.avatar-container{
+    width: 50%;
+    position: relative;
+}
+
+.icons-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;   
+}
+
+.name{
+    font-size: 6rem;
+}
+
+.career{
+    color: var(--highlight-one-color) !important;
+    font-size: 5rem;
+}
+
+.description{
+    font-size: 1.8rem;
+    margin: 2rem 0;
+}
+
+.icon{
+    height: 5rem;
+    width: 5rem;
+}
+
+#avatar-img{
+    position: relative;
+    left: calc(50% - 275px);
+    height: 550px;
+    width: 550px;
+}
+
+.animation-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 600px;
+    width: 600px;
+    border-radius: 0;
+    transform: translate(-50%, -50%);
+    animation-name: rotacion;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    border-radius: 50%;
+    border: 3px dotted var(--highlight-one-color)
+}
+
+.ball{
+    height: 65px;
+    width: 65px;
+    background-color: var(--highlight-one-color);
+    border-radius: 50%;
+}
+
+.ball:nth-of-type(1){
+    position: relative;
+    top: 3%;
+    left: 3%;
+}
+
+.ball:nth-of-type(2){
+    position: relative;
+    top: 80%;
+    left: 80%;
+}
+
+#links-list a:hover{
+    color: var(--highlight-one-color);
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+@keyframes rotacion{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
