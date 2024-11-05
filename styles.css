@@ -15,12 +15,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Orbitron;
+    scroll-behavior: smooth;
 }
 
 body{
     color: var(--font-color);
     background-color: var(--background-color);
-    scroll-behavior: smooth;
 }
 
 #navbar{
@@ -177,6 +177,27 @@ body{
 
 
 /*--------------------------------------ABOUT-----------------------------------*/
-#about-section{
-    display: flex;
+.about-container{
+    padding: 0 80px;
 }
+
+.computer-container{
+    padding-right: 100px;
+}
+.green{
+    color: var(--highlight-two-color);
+}
+
+.blue{
+    color: var(--highlight-one-color)
+}
+
+.section-title{
+    font-size: 5.4rem;
+    margin-bottom: 1rem;
+}
+
+.about-text{
+    font-size: 2rem;
+}
+/*--------------------------------------SKILLS-----------------------------------*/
